@@ -1,9 +1,4 @@
-import './style.css'
-import './style.css'
+import CRenderer from "/scripts/Renderer.js"
+import jQuery from "jquery"
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
-// it works
-// please work
+var Renderer = new CRenderer()
