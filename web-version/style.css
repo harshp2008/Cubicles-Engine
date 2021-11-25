@@ -6,40 +6,137 @@
 
 body{
 
-    margin: 0px;
-    padding: 0px;
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
     width: 100vw;
     height: 100vh;
 
     background: white;
-    display: flex;
-}
-.g{    
-
-
-width: 50%;
-height: 100%;
-
-outline: none;
-border: none;
-
 }
 
-.webgl{
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
+.renderer-option-bar{    
+
     outline: none;
     border: none;
+    background-color:rgba(85, 129, 209, 0.762);
+
 }
+
+
+
+div.webgl{
+
+    outline: none;
+    border: none;
+
+
+}
+
+
 .cubicles-renderer{
-    margin: 0px;
-    padding: 0px;
-    width: 50%;
-    height: 100%;
+
+
     outline: none;
     border: none;
 }
+
+
+.property-bar{
+
+    outline: none;
+    border: none;
+
+    width: 100%;
+    height: 40%;
+
+    background-color:rgba(164, 85, 209, 0.762);
+} 
+
+.tabs-scroller{
+    background-color:rgb(255, 192, 74);
+}
+
+
+.tab-displayer{
+    background-color:rgba(255, 255, 255, 0.514);
+}
+
+
+
+/* Portrait */
+@media screen and (orientation:portrait) {
+
+    .renderer-option-bar{    
+
+        width: 100%;
+        height: 7%;
+
+    
+    }
+
+    .cubicles-renderer{
+
+        width: 100%;
+        height: 53%;
+    }
+
+    .property-bar{
+    
+        width: 100%;
+        height: 40%;
+    } 
+
+    .tab-displayer{
+        width: 100%;
+        height: 80%;
+    }
+
+    .tabs-scroller{
+        width: 100%;
+        height: 20%;
+    }
+    
+    
+
+}
+
+    /* Landscape */
+    @media screen and (orientation:landscape) {
+
+        body {
+            display: flex;
+        }
+
+        .renderer-option-bar{    
+
+            width: 10%;
+            height: 100%;
+    
+        
+        }
+    
+        .cubicles-renderer{
+    
+            width: 55%;
+            height: 100%;
+        }
+    
+        .property-bar{
+        
+            width: 35%;
+            height: 100%;
+        } 
+
+        .tab-displayer{
+            width: 100%;
+            height: 82%;
+
+        }
+
+
+        .tabs-scroller{
+            width: 100%;
+            height: 18%;
+        }
+        
+    }
+
+

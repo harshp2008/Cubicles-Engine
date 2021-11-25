@@ -5,8 +5,9 @@
 <head>
 
   <meta charset="UTF-8">
+  <meta name="mobile-web-app-capable" content="yes">
 
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
@@ -16,14 +17,17 @@
 
 <body>
 
-  <div class = "cubicles-renderer">
+  <div class= "renderer-option-bar"></div>
 
-    <canvas class="webgl"></canvas>
+  <div class = "cubicles-renderer"></div>
+
+  <div class = "property-bar">
+
+    <div class = "tab-displayer"></div>
+
+    <div class = "tabs-scroller"></div>
 
   </div>
-
-  <div class= "g"></div>
-
 
 </body>
 

@@ -7,35 +7,30 @@ export default class CRenderer {
 
         canvas = document.querySelector('canvas.webgl'),
         scene = new THREE.Scene(),
-        parent = document.querySelector('.cubicles-renderer')
+        parent = document.querySelector('div.cubicles-renderer')
 
     ) {
+        
+    function addCanvas(){
+        parent.innerHTML = '<canvas class="webgl" style = "margin: 0px; padding: 0px; width: 100%; height: 100%; outline: none; border: none;" ></canvas>'; // replaces the inner HTML of #someBox to a canvas
+    }
 
-    
+    console.log(canvas)
 
 
-    function isCanvasPresent(p, c){
+    if (canvas == null){
+        
+        addCanvas()
 
-        console.log(c)
-    
-        if (c == null){
+        this.canvas = document.querySelector('canvas.webgl')
 
-            
-            p.innerHTML = '<canvas class="webgl"> </canvas>'; // replaces the inner HTML of #someBox to a canvas
-
-            return document.querySelector('canvas.webgl')
-
-        } else {
-            return c
-
-        }
+    } else {
+        this.canvas = canvas
 
     }
 
-    this.canvas = isCanvasPresent(parent, canvas)
+        
 
-    console.log(this.canvas)
-    
 
 //setting parameters
         this.parent = parent
@@ -48,10 +43,7 @@ export default class CRenderer {
 
         this.sizes = resizeWidth(this.sizes)
 
-
-
-
-// resizes function
+        // resizes function
 
         function resizeWidth(sizes) {
 
@@ -69,10 +61,6 @@ export default class CRenderer {
         this.camera.position.x = 0
         this.camera.position.y = 0
         this.camera.position.z = 5
-
-        this.controls = new OrbitControls( this.camera, this.canvas );
-
-        this.controls.update();
 
 
 
@@ -108,6 +96,7 @@ export default class CRenderer {
             this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 
+
         });
 
 
@@ -130,10 +119,6 @@ export default class CRenderer {
             this.renderer.render(this.scene, this.camera)
 
             window.requestAnimationFrame(tick)
-
-            this.controls.update();
-
-
         }
 
         tick()
